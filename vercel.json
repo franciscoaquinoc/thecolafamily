@@ -1,0 +1,18 @@
+echo '{
+  "builds": [
+    {
+      "src": "tefamily/html/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/tefamily/html/index-slider.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/tefamily/html/$1"
+    }
+  ]
+}' > vercel.json
